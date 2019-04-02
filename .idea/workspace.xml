@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c1d45ee-dea6-4acd-b488-ef15cab8945d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/CountVectorizer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TF-IDF.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Word2Vec.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/word2vec_py.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/spark_local.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/spark_local.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/word2vec_py.py" beforeDir="false" afterPath="$PROJECT_DIR$/word2vec_py.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,11 +20,20 @@
       <file leaf-file-name="word2vec_py.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/word2vec_py.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+            <state relative-caret-position="228">
+              <caret line="215" column="23" lean-forward="true" selection-start-line="215" selection-start-column="23" selection-end-line="215" selection-end-column="23" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/multiprocessing/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="520">
+              <caret line="242" column="20" selection-start-line="242" selection-start-column="14" selection-end-line="242" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -48,9 +51,10 @@
     <findStrings>
       <find>rmseExplicit</find>
       <find>244</find>
-      <find>244	381</find>
-      <find>244</find>
-      <find>244	652</find>
+      <find />
+      <find />
+      <find>_initargs</find>
+      <find>indices</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -67,6 +71,7 @@
         <option value="$PROJECT_DIR$/CountVectorizer.py" />
         <option value="$PROJECT_DIR$/Word2Vec.py" />
         <option value="$PROJECT_DIR$/TF-IDF.py" />
+        <option value="$PROJECT_DIR$/word2vec_py.py" />
       </list>
     </option>
   </component>
@@ -84,7 +89,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -100,10 +104,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -125,7 +130,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Word2Vec">
+  <component name="RunManager" selected="Python.word2vec_py">
     <configuration name="CountVectorizer" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="spark_local" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -139,24 +144,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CountVectorizer.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="LR" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="spark_local" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LR.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -216,20 +203,38 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="word2vec_py" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="spark_local" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/word2vec_py.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list>
-      <item itemvalue="Python.LR" />
       <item itemvalue="Python.test" />
       <item itemvalue="Python.TF-IDF" />
       <item itemvalue="Python.Word2Vec" />
       <item itemvalue="Python.CountVectorizer" />
+      <item itemvalue="Python.word2vec_py" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.word2vec_py" />
         <item itemvalue="Python.Word2Vec" />
         <item itemvalue="Python.CountVectorizer" />
         <item itemvalue="Python.TF-IDF" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.LR" />
       </list>
     </recent_temporary>
   </component>
@@ -244,16 +249,31 @@
       <option name="presentableId" value="Default" />
       <updated>1552879967893</updated>
     </task>
+    <task id="LOCAL-00001" summary="latest">
+      <created>1554189430095</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1554189430095</updated>
+    </task>
+    <task id="LOCAL-00002" summary="latest">
+      <created>1554189482228</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1554189482228</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16069546" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16069546" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.7459106" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.13413304" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -272,14 +292,25 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="latest" />
+    <option name="LAST_COMMIT_MESSAGE" value="latest" />
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/word2vec_py.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/user-cf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="754">
           <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-          <folding>
-            <element signature="e#217#230#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -287,9 +318,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1560">
           <caret line="65" column="35" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="35" />
-          <folding>
-            <element signature="e#198#251#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -297,9 +325,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="18" selection-start-line="18" selection-end-line="19" selection-end-column="34" />
-          <folding>
-            <element signature="e#210#254#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -331,9 +356,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="754">
           <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-          <folding>
-            <element signature="e#217#230#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -341,9 +363,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1560">
           <caret line="65" column="35" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="35" />
-          <folding>
-            <element signature="e#198#251#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -365,9 +384,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="780">
           <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-          <folding>
-            <element signature="e#217#230#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -375,9 +391,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1690">
           <caret line="65" column="35" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="35" />
-          <folding>
-            <element signature="e#198#251#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -392,9 +405,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="780">
           <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-          <folding>
-            <element signature="e#217#230#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -402,9 +412,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1690">
           <caret line="65" column="35" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="35" />
-          <folding>
-            <element signature="e#198#251#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -496,9 +503,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1265">
           <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
-          <folding>
-            <element signature="e#210#254#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -506,9 +510,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="815">
           <caret line="65" column="35" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="35" />
-          <folding>
-            <element signature="e#198#251#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -516,9 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-          <folding>
-            <element signature="e#217#230#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -554,10 +552,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/Python27/Lib/multiprocessing/pool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="135" column="4" selection-start-line="135" selection-start-column="4" selection-end-line="135" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/multiprocessing/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="242" column="20" selection-start-line="242" selection-start-column="14" selection-end-line="242" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/word2vec_py.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        <state relative-caret-position="228">
+          <caret line="215" column="23" lean-forward="true" selection-start-line="215" selection-start-column="23" selection-end-line="215" selection-end-column="23" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

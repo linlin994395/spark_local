@@ -1,13 +1,14 @@
+# -*- coding: utf-8 -*-
 import argparse
 import math
 import struct
 import sys
 import time
 import warnings
-
 import numpy as np
-
 from multiprocessing import Pool, Value, Array
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 class VocabItem:
     def __init__(self, word):
@@ -109,11 +110,13 @@ class Vocab:
         vocab_size = len(self)
         count = [t.count for t in self] + [1e15] * (vocab_size - 1)
         parent = [0] * (2 * vocab_size - 2)
+        # 分支编码
         binary = [0] * (2 * vocab_size - 2)
         
         pos1 = vocab_size - 1
         pos2 = vocab_size
 
+        # 0 到 vocab_size - 2
         for i in xrange(vocab_size - 1):
             # Find min1
             if pos1 >= 0:
@@ -152,7 +155,8 @@ class Vocab:
 
             node_idx = i
             while node_idx < root_idx:
-                if node_idx >= vocab_size: path.append(node_idx)
+                if node_idx >= vocab_size:
+                    path.append(node_idx)
                 code.append(binary[node_idx])
                 node_idx = parent[node_idx]
             path.append(root_idx)
@@ -370,19 +374,38 @@ def train(fi, fo, cbow, neg, dim, alpha, win, min_count, num_processes, binary):
     save(vocab, syn0, fo, binary)
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-train', help='Training file', dest='fi', required=True)
-    parser.add_argument('-model', help='Output model file', dest='fo', required=True)
-    parser.add_argument('-cbow', help='1 for CBOW, 0 for skip-gram', dest='cbow', default=1, type=int)
-    parser.add_argument('-negative', help='Number of negative examples (>0) for negative sampling, 0 for hierarchical softmax', dest='neg', default=5, type=int)
-    parser.add_argument('-dim', help='Dimensionality of word embeddings', dest='dim', default=100, type=int)
-    parser.add_argument('-alpha', help='Starting alpha', dest='alpha', default=0.025, type=float)
-    parser.add_argument('-window', help='Max window length', dest='win', default=5, type=int) 
-    parser.add_argument('-min-count', help='Min count for words used to learn <unk>', dest='min_count', default=5, type=int)
-    parser.add_argument('-processes', help='Number of processes', dest='num_processes', default=1, type=int)
-    parser.add_argument('-binary', help='1 for output model in binary format, 0 otherwise', dest='binary', default=0, type=int)
-    #TO DO: parser.add_argument('-epoch', help='Number of training epochs', dest='epoch', default=1, type=int)
-    args = parser.parse_args()
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument('-train', help='Training file', dest='fi', required=True)
+    # parser.add_argument('-model', help='Output model file', dest='fo', required=True)
+    # parser.add_argument('-cbow', help='1 for CBOW, 0 for skip-gram', dest='cbow', default=1, type=int)
+    # parser.add_argument('-negative', help='Number of negative examples (>0) for negative sampling, 0 for hierarchical softmax', dest='neg', default=5, type=int)
+    # parser.add_argument('-dim', help='Dimensionality of word embeddings', dest='dim', default=100, type=int)
+    # parser.add_argument('-alpha', help='Starting alpha', dest='alpha', default=0.025, type=float)
+    # parser.add_argument('-window', help='Max window length', dest='win', default=5, type=int)
+    # parser.add_argument('-min-count', help='Min count for words used to learn <unk>', dest='min_count', default=5, type=int)
+    # parser.add_argument('-processes', help='Number of processes', dest='num_processes', default=1, type=int)
+    # parser.add_argument('-binary', help='1 for output model in binary format, 0 otherwise', dest='binary', default=0, type=int)
+    # #TO DO: parser.add_argument('-epoch', help='Number of training epochs', dest='epoch', default=1, type=int)
+    # args = parser.parse_args()
 
-    train(args.fi, args.fo, bool(args.cbow), args.neg, args.dim, args.alpha, args.win,
-          args.min_count, args.num_processes, bool(args.binary))
+    syn0, syn1 = init_net(3, 5)
+    print np.ctypeslib.as_array(syn0)
+    print np.ctypeslib.as_array(syn1)
+
+    print [1e15] * (3 - 1)
+    count = [t for t in [1,2,3,4]] + [1e15] * (4 - 1)
+    print count
+
+    parent = [0] * (2 * 4 - 2)
+    binary = [0] * (2 * 4 - 2)
+    print parent
+    print binary
+
+    for x in xrange(4 - 1):
+        print x
+
+    for x in range(5):
+        print x
+
+    # train(args.fi, args.fo, bool(args.cbow), args.neg, args.dim, args.alpha, args.win,
+    #       args.min_count, args.num_processes, bool(args.binary))
