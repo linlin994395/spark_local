@@ -391,6 +391,12 @@ if __name__ == '__main__':
     syn0, syn1 = init_net(3, 5)
     print np.ctypeslib.as_array(syn0)
     print np.ctypeslib.as_array(syn1)
+    syn0 = np.ctypeslib.as_array(syn0)
+    neu1 = np.mean(np.array([syn0[c] for c in [0,1]]), axis=0)
+    print neu1
+
+    print len([1,1,1])
+    assert len([1,1]) == 3, 'neu1 and dim do not agree'
 
     print [1e15] * (3 - 1)
     count = [t for t in [1,2,3,4]] + [1e15] * (4 - 1)
