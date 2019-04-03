@@ -165,6 +165,7 @@ class Vocab:
             token.path = [j - vocab_size for j in path[::-1]]
             token.code = code[::-1]
 
+
 class UnigramTable:
     """
     A list of indices of tokens in the vocab following a power law distribution,
@@ -192,6 +193,7 @@ class UnigramTable:
         indices = np.random.randint(low=0, high=len(self.table), size=count)
         return [self.table[i] for i in indices]
 
+
 def sigmoid(z):
     if z > 6:
         return 1.0
@@ -199,6 +201,7 @@ def sigmoid(z):
         return 0.0
     else:
         return 1 / (1 + math.exp(-z))
+
 
 def init_net(dim, vocab_size):
     # Init syn0 with random numbers from a uniform distribution on the interval [-0.5, 0.5]/dim
@@ -212,6 +215,7 @@ def init_net(dim, vocab_size):
     syn1 = Array(syn1._type_, syn1, lock=False)
 
     return (syn0, syn1)
+
 
 def train_process(pid):
     # Set fi to point to the right chunk of training file
@@ -396,7 +400,7 @@ if __name__ == '__main__':
     print neu1
 
     print len([1,1,1])
-    assert len([1,1]) == 3, 'neu1 and dim do not agree'
+    assert len([1,1,1]) == 3, 'neu1 and dim do not agree'
 
     print [1e15] * (3 - 1)
     count = [t for t in [1,2,3,4]] + [1e15] * (4 - 1)
@@ -412,6 +416,13 @@ if __name__ == '__main__':
 
     for x in range(5):
         print x
+
+    print zip([1, 2], [2, 3])
+
+    a = [1, 2]
+    print a[::-1]
+
+    print sum(a)
 
     # train(args.fi, args.fo, bool(args.cbow), args.neg, args.dim, args.alpha, args.win,
     #       args.min_count, args.num_processes, bool(args.binary))
